@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "repository": "agent-ecosystem-integration",
+  "capabilities": [
+    {
+      "id": "integration.profiles",
+      "status": "scaffolded",
+      "description": "Documented protocol and adapter profiles."
+    },
+    {
+      "id": "integration.conformance",
+      "status": "planned",
+      "description": "Cross-component contract tests."
+    }
+  ]
+}
