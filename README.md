@@ -32,6 +32,15 @@ MCP, A2A, OpenAPI, JSON Schema, and OpenTelemetry are integration targets—not 
 ## Status
 Scaffolded, v0.1.0. Initial integration contracts, example, validator, tests, and CI are published. Production adapters and cross-repository conformance suites remain future work.
 
+## Entry-level build
+
+Start with the runnable starter build:
+
+    python tools/starter_build.py
+    python -m unittest discover -s tests -v
+
+See [Entry-level build guide](docs/ENTRY-LEVEL-BUILD.md) for Starter → Developer → Production progression.
+
 ## Ecosystem
 Master registry: https://github.com/PCakes303/agent-intelligence-ecosystem
 
