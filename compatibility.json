@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "repository": "agent-ecosystem-integration",
+  "requires": [
+    "agent-foundation-spec",
+    "agent-schema-registry",
+    "agent-resource-manifest",
+    "agent-identity-trust"
+  ],
+  "provides": [
+    "integration.profiles"
+  ],
+  "principle": "Adapters translate at explicit boundaries and must not silently weaken security semantics."
+}
