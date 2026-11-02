@@ -12,8 +12,7 @@ MAX_DEPTH = 32
 def _pairs(pairs):
     result = {}
     for key, value in pairs:
-        if key in result:
-            raise ValueError(f"duplicate JSON key: {key}")
+        if key in result: raise ValueError(f"duplicate JSON key: {key}")
         result[key] = value
     return result
 
@@ -45,27 +44,20 @@ def load_profile(path):
 
 
 def validate(document):
-    if not isinstance(document, dict):
-        return ["profile must be an object"]
+    if not isinstance(document, dict): return ["profile must be an object"]
     try:
         schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
         Draft202012Validator.check_schema(schema)
-        errors = sorted(
-            Draft202012Validator(schema).iter_errors(document),
-            key=lambda error: (tuple(str(part) for part in error.absolute_path), error.message),
-        )
+        errors = sorted(Draft202012Validator(schema).iter_errors(document),
+                        key=lambda error: (tuple(str(part) for part in error.absolute_path), error.message))
     except (OSError, json.JSONDecodeError, ValueError) as exc:
         return [f"normative schema unavailable or invalid: {type(exc).__name__}"]
-    return [
-        f"schema violation at {'.'.join(str(part) for part in error.absolute_path) or '<root>'}: {error.message}"
-        for error in errors
-    ]
+    return [f"schema violation at {'.'.join(str(part) for part in error.absolute_path) or '<root>'}: {error.message}" for error in errors]
 
 
 def main():
     path = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "examples" / "integration-profile.json"
-    try:
-        document = load_profile(path)
+    try: document = load_profile(path)
     except (OSError, UnicodeDecodeError, json.JSONDecodeError, ValueError, RecursionError) as exc:
         print(exc, file=sys.stderr); return 2
     errors = validate(document)
