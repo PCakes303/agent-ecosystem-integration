@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-ecosystem-integration/blob/main/schemas/integration-profile.schema.json",
+  "title": "Agent Ecosystem Integration Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_version",
+    "id",
+    "source",
+    "target",
+    "security",
+    "reliability"
+  ],
+  "properties": {
+    "profile_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-z0-9][a-z0-9._:-]*$"
+    },
+    "status": {
+      "type": "string",
+      "maxLength": 32,
+      "enum": [
+        "illustrative",
+        "experimental",
+        "active",
+        "deprecated"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol",
+        "version"
+      ],
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol",
+        "version"
+      ],
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validate_input",
+        "authorize_each_call",
+        "forward_credentials"
+      ],
+      "properties": {
+        "validate_input": {
+          "const": true
+        },
+        "authorize_each_call": {
+          "const": true
+        },
+        "forward_credentials": {
+          "const": false
+        }
+      }
+    },
+    "reliability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timeout_required",
+        "retries"
+      ],
+      "properties": {
+        "timeout_required": {
+          "const": true
+        },
+        "retries": {
+          "const": "bounded"
+        },
+        "idempotency": {
+          "type": "string",
+          "maxLength": 128
+        }
+      }
+    }
+  }
+}
