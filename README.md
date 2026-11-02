@@ -47,3 +47,6 @@ Master registry: https://github.com/PCakes303/agent-intelligence-ecosystem
 Public project identity: **MrCakes931**  
 GitHub owner: `PCakes303`
 
+## Licensing
+
+This repository applies a scoped mixed-license policy: original source code and machine-readable contracts are licensed under Apache-2.0; original human-readable documentation is licensed under CC BY 4.0. Third-party material retains upstream terms. Datasets, evidence, fixtures, sample payloads, media, and material with uncertain provenance are not blanket-licensed and require separate review. See [LICENSE.md](LICENSE.md).
