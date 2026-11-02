@@ -1,0 +1,23 @@
+{
+  "profile_version": "1.0",
+  "id": "example.mcp-to-internal-tool",
+  "source": {
+    "protocol": "MCP",
+    "version": "declared-by-deployment"
+  },
+  "target": {
+    "protocol": "internal-tool-contract",
+    "version": "1.0"
+  },
+  "status": "illustrative",
+  "security": {
+    "validate_input": true,
+    "authorize_each_call": true,
+    "forward_credentials": false
+  },
+  "reliability": {
+    "timeout_required": true,
+    "retries": "bounded",
+    "idempotency": "required-for-non-idempotent-effects"
+  }
+}
