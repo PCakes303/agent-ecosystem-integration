@@ -1,0 +1,9 @@
+{
+  "name": "agent-ecosystem-integration",
+  "version": "0.1.0",
+  "status": "scaffolded",
+  "license": "Apache-2.0",
+  "description": "Integration profiles and interoperability guidance.",
+  "ecosystem_master": "https://github.com/PCakes303/agent-intelligence-ecosystem",
+  "main_public_identity": "https://github.com/HuffmanMainNode"
+}
