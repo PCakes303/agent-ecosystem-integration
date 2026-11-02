@@ -1,16 +1,38 @@
 {
-  "schema_version": "1.0",
+  "capabilities_version": "1.1.0",
   "repository": "agent-ecosystem-integration",
+  "repository_id": "integration",
+  "maturity": "scaffolding",
   "capabilities": [
     {
       "id": "integration.profiles",
+      "name": "Documented protocol and adapter profiles",
       "status": "scaffolded",
-      "description": "Documented protocol and adapter profiles."
+      "description": "Integration profile contract, examples, and validator are present.",
+      "evidence": [
+        "docs/INTEGRATION.md",
+        "docs/ADAPTER-CONTRACT.md",
+        "examples/integration-profile.json",
+        "tools/validate_profile.py"
+      ],
+      "limitations": [
+        "Scaffolding only; downstream production use is not certified."
+      ]
     },
     {
       "id": "integration.conformance",
+      "name": "Cross-component contract tests",
       "status": "planned",
-      "description": "Cross-component contract tests."
+      "description": "Cross-repository end-to-end conformance is not yet implemented.",
+      "evidence": [],
+      "limitations": [
+        "Not implemented; no interoperability or runtime claim."
+      ]
     }
+  ],
+  "explicit_non_capabilities": [
+    "Production protocol adapters",
+    "Certification of MCP or A2A interoperability",
+    "Authorization bypass or trust translation"
   ]
 }
