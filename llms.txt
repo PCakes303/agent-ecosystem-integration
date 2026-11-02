@@ -3,12 +3,12 @@
 > Cross-repository integration profiles, adapter safety contracts, interoperability guidance, and conformance validation.
 
 ## Start here
-- [README](${url}README.md)
-- [AI agent instructions](${url}AGENTS.md)
-- [Repository manifest](${url}manifest.json)
-- [Capabilities](${url}capabilities.json)
-- [Compatibility declarations](${url}compatibility.json)
-- [Security policy](${url}SECURITY.md)
+- [README](https://github.com/PCakes303/agent-ecosystem-integration/blob/main/README.md)
+- [AI agent instructions](https://github.com/PCakes303/agent-ecosystem-integration/blob/main/AGENTS.md)
+- [Repository manifest](https://github.com/PCakes303/agent-ecosystem-integration/blob/main/manifest.json)
+- [Capabilities](https://github.com/PCakes303/agent-ecosystem-integration/blob/main/capabilities.json)
+- [Compatibility declarations](https://github.com/PCakes303/agent-ecosystem-integration/blob/main/compatibility.json)
+- [Security policy](https://github.com/PCakes303/agent-ecosystem-integration/blob/main/SECURITY.md)
 
 ## Intended agent use
 Use this repository for protocol mappings and integration guidance. Declared capabilities include integration profiles; cross-component conformance remains planned.
