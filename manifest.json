@@ -1,9 +1,66 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PCakes303/agent-ecosystem-integration/blob/main/manifest.json",
+  "manifest_version": "1.0.0",
+  "id": "integration",
   "name": "agent-ecosystem-integration",
-  "version": "0.1.0",
-  "status": "scaffolded",
-  "license": "Apache-2.0",
-  "description": "Integration profiles and interoperability guidance.",
-  "ecosystem_master": "https://github.com/PCakes303/agent-intelligence-ecosystem",
-  "main_public_identity": "https://github.com/HuffmanMainNode"
+  "visibility": "public",
+  "maturity": "scaffolding",
+  "summary": "Cross-repository integration profiles, adapter safety contracts, interoperability guidance, and conformance validation.",
+  "license": {
+    "expression": null,
+    "status": "pending-review",
+    "notes": "License selection is pending repository-specific review. No license is asserted until an approved LICENSE file is committed."
+  },
+  "interfaces": [
+    {
+      "name": "integration-profiles",
+      "version": "0.1.0",
+      "kind": "document",
+      "stability": "draft"
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "foundation",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "schema-registry",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "resource-manifest",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "identity-trust",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
+      "id": "secure-supply-chain",
+      "constraint": "*",
+      "kind": "contract"
+    }
+  ],
+  "security": {
+    "threat_model": "See SECURITY.md. Treat external inputs, manifests, events, and referenced artifacts as untrusted until independently validated.",
+    "secrets_in_repository": false,
+    "data_classification": "public",
+    "security_contact": null
+  },
+  "repository_url": "https://github.com/PCakes303/agent-ecosystem-integration",
+  "default_branch": "main",
+  "compatibility": [],
+  "evidence": [
+    {
+      "claim": "Repository scaffold and starter CI are present; domain maturity remains partial.",
+      "kind": "specification",
+      "location": "README.md, tests/, and CI workflow; see repository Actions for run evidence."
+    }
+  ]
 }
