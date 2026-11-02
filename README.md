@@ -14,12 +14,12 @@ Defines adapters, integration profiles, and conformance expectations for connect
 - docs/INTEGRATION.md — integration architecture and protocol map.
 - docs/ADAPTER-CONTRACT.md — adapter requirements.
 - examples/integration-profile.json — illustrative integration profile.
-- tools/validate_profile.py — standard-library profile validator.
+- tools/validate_profile.py — schema-backed bounded profile validator.
 - tests/ — automated validation tests.
 - .github/workflows/validate.yml — CI validation.
 
 ## Validate locally
-Requires Python 3.10+; no third-party packages are needed.
+Requires Python 3.10+. Install the pinned development schema validator with `python -m pip install -r requirements-dev.txt`.
 
     python tools/validate_profile.py
     python -m unittest discover -s tests -v
