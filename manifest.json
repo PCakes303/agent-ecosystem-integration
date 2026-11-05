@@ -22,6 +22,11 @@
   ],
   "dependencies": [
     {
+      "id": "master",
+      "constraint": "*",
+      "kind": "contract"
+    },
+    {
       "id": "foundation",
       "constraint": "*",
       "kind": "contract"
